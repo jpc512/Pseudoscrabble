@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Label extends Actor
 {
+    private int pointCount = 0;
+    
     /**
      * Act - do whatever the Label wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,16 +17,29 @@ public class Label extends Actor
     
     public Label(String text)
     {
-        GreenfootImage img = new GreenfootImage (text.length()*20,30);
+        GreenfootImage img = new GreenfootImage (200,40);
         img.drawString(text,2,20);
+        img.setColor(Color.BLACK);
         setImage(img);
     }
     
-    public void setText(String text)
+    public void setText(int newPoints)
     {
         GreenfootImage img = getImage();
         img.clear();
+        this.pointCount = newPoints + this.pointCount;
+        String text = "PUNTOS = " + String.valueOf(pointCount);
         img.drawString(text,2,20);
+    }
+    
+    public int getCount()
+    {
+        return pointCount;
+    }
+    
+    public void setCount(int count)
+    {
+        this.pointCount = count;
     }
     
     public void act()
