@@ -26,28 +26,20 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        // AGREGAR TABLERO
+        /**
+     * CREAR EL MUNDO CON SUS RESPECTIVAS PARTES
+     * Contador de puntos
+     */
         Label label = new Label("PUNTOS = 0");
         addObject(label,150,180);
-        
-        
-        Label labelR = new Label("Casillas ROJAS: puntos x1");
-        addObject(labelR,122,275);
-        Label labelP = new Label("Casillas ROSADAS: puntos x2");
-        addObject(labelP,122,290);
-        Label labelO = new Label("Casillas NARANJAS: puntos x4");
-        addObject(labelO,122,305);
-        Label labelY = new Label("Casillas AMARILLAS: puntos x8");
-        addObject(labelY,122,320);
-        Label labelButton = new Label("Oprime el botón azul para ver ");
-        addObject(labelButton,122,340);
-        Label labelButton2 = new Label("tu puntaje!!!!!");
-        addObject(labelButton2,122,355);
-
-        
+        /**
+     * Botón para agregar palabra
+     */
         Button button = new Button();
         addObject(button,93,107);
-
+        /**
+     * Casillas del tablero
+     */
         Casilla casilla1 = new CasillaR();
         addObject(casilla1,220,40);
         Casilla casilla2 = new CasillaR();
@@ -513,24 +505,15 @@ public class MyWorld extends World
         Casilla casilla15_15 = new CasillaR();
         addObject(casilla15_15,500,320);
 
-        //AGREGAR LETRAS
+        /**
+     * Crear fichas de letras de acuerdo a distribución oficial
+     * Colocarlas en posiciones aleatorias en el espacio designado
+     */
         Ficha ficha1 = new Ficha(button,label,"A",1);
         int x = Greenfoot.getRandomNumber(360)+220;
         int y = Greenfoot.getRandomNumber(30)+350;
         addObject(ficha1,x,y);
 
-        Ficha ficha2 = new Ficha(button,label,"A",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha2,x,y);
-        Ficha ficha3 = new Ficha(button,label,"A",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha3,x,y);
-        Ficha ficha4 = new Ficha(button,label,"A",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha4,x,y);
         Ficha ficha5 = new Ficha(button,label,"A",1);
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
@@ -567,18 +550,7 @@ public class MyWorld extends World
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
         addObject(ficha13,x,y);
-        Ficha ficha14 = new Ficha(button,label,"E",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha14,x,y);
-        Ficha ficha15 = new Ficha(button,label,"E",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha15,x,y);
-        Ficha ficha16 = new Ficha(button,label,"E",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha16,x,y);
+
         Ficha ficha17 = new Ficha(button,label,"E",1);
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
@@ -775,18 +747,7 @@ public class MyWorld extends World
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
         addObject(ficha65,x,y);
-        Ficha ficha66 = new Ficha(button,label,"U",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha66,x,y);
-        Ficha ficha67 = new Ficha(button,label,"U",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha67,x,y);
-        Ficha ficha68 = new Ficha(button,label,"U",1);
-        x = Greenfoot.getRandomNumber(299)+220;
-        y = Greenfoot.getRandomNumber(30)+350;
-        addObject(ficha68,x,y);
+
         Ficha ficha69 = new Ficha(button,label,"D",2);
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
@@ -879,6 +840,43 @@ public class MyWorld extends World
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
         addObject(ficha91,x,y);
+
+        Ficha ficha2 = new Ficha(button,label,"A",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha2,x,y);
+        Ficha ficha3 = new Ficha(button,label,"A",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha3,x,y);
+        Ficha ficha4 = new Ficha(button,label,"A",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha4,x,y);
+        Ficha ficha14 = new Ficha(button,label,"E",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha14,x,y);
+        Ficha ficha15 = new Ficha(button,label,"E",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha15,x,y);
+        Ficha ficha16 = new Ficha(button,label,"E",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha16,x,y);
+        Ficha ficha66 = new Ficha(button,label,"U",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha66,x,y);
+        Ficha ficha67 = new Ficha(button,label,"U",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha67,x,y);
+        Ficha ficha68 = new Ficha(button,label,"U",1);
+        x = Greenfoot.getRandomNumber(299)+220;
+        y = Greenfoot.getRandomNumber(30)+350;
+        addObject(ficha68,x,y);
         Ficha ficha92 = new Ficha(button,label,"C",4);
         x = Greenfoot.getRandomNumber(299)+220;
         y = Greenfoot.getRandomNumber(30)+350;
@@ -908,6 +906,8 @@ public class MyWorld extends World
         y = Greenfoot.getRandomNumber(30)+350;
         addObject(ficha98,x,y);
 
-        
+        CopyOfButton copyOfButton = new CopyOfButton();
+        addObject(copyOfButton,99,296);
+        label.setLocation(95,180);
     }
 }

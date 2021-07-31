@@ -11,32 +11,32 @@ public class Label extends Actor
     private int pointCount = 0;
     
     /**
-     * Act - do whatever the Label wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * CREA LA PRIMERA IMAGEN QUE CONTIENE LOS PUNTAJES
      */
     
     public Label(String text)
     {
-        GreenfootImage img = new GreenfootImage (200,40);
-        img.drawString(text,2,20);
-        img.setColor(Color.BLACK);
-        setImage(img);
+        setImage(new GreenfootImage("PUNTOS", 24,Color.WHITE, Color.BLACK));
     }
     
+    /**
+     * SETTEXT ACTUALIZA LOS PUNTOS UTILIZANDO COMO PARÁMETRO LOS NUEVOS PUNTOS DEL TURNO
+     * ESTE MÉTODO SE LLAMA DESDE
+     */
     public void setText(int newPoints)
     {
-        GreenfootImage img = getImage();
-        img.clear();
         this.pointCount = newPoints + this.pointCount;
         String text = "PUNTOS = " + String.valueOf(pointCount);
-        img.drawString(text,2,20);
+        setImage(new GreenfootImage(text, 24,Color.BLACK, Color.WHITE));
     }
     
+    /**
+     * SET Y GET DE LA VARIABLE POINTCOUNT, QUE SE UTILIZA PARA ACTUALIZAR EL TEXTO
+     */
     public int getCount()
     {
         return pointCount;
     }
-    
     public void setCount(int count)
     {
         this.pointCount = count;

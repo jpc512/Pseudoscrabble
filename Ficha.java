@@ -12,6 +12,10 @@ public class Ficha extends Casilla
     private Label myLabel;
     private Button myButton;
     
+    /**
+     * CREAR LA FICHA RESPECTIVA DE ACUERDO A LOS PARÁMETROS DE "LETRA" Y "VALOR" DE ACUERDO A 
+     * LOS OFICIALES DE SCRABBLE
+     */
     public Ficha(Button button, Label label, String letra,int valor)
     {
         GreenfootImage img = new GreenfootImage("tileblue.png");
@@ -23,8 +27,7 @@ public class Ficha extends Casilla
     }
     
     /**
-     * Act - do whatever the Ficha wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * ESTE MÉTODO PERMITE QUE SE PUEDA ARRASTRAR LAS FICHAS POR EL MUNDO, PARA COLOCARLAS EN EL TABLERO
      */
     public void act()
     {
@@ -39,7 +42,11 @@ public class Ficha extends Casilla
     }
     
     public int getPoints()
-    {
+    {   
+        /**
+         * AGREGA LOS PUNTOS DEPENDIENDO DEL COLOR EN EL QUE LA FICHA SE HA COLOCADO
+         * ESTOS SON LOS PUNTOS DEL NUEVO TURNO
+         */
         Actor roja = getOneObjectAtOffset(0,0, CasillaR.class);
         Actor rosa = getOneObjectAtOffset(0,0, CasillaP.class);
         Actor naranja = getOneObjectAtOffset(0,0, CasillaO.class);
@@ -67,9 +74,9 @@ public class Ficha extends Casilla
     }
     
     public void showPoints()
-    {   //World world;
-        //world = getWorld();
-        //Button myButton = world.button;
+    {   /**
+     * DETECTA CUANDO EL BOTÓN SE PRESIONA, PARA ACTUALIZAR LOS PUNTAJES
+     */
         if (myButton.isClicked())
         {
         int newPoints = getPoints();
